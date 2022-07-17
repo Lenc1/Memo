@@ -130,6 +130,10 @@
 background: rgb(65,105,225);
 border: 2px solid rgb(65,105,225);
 }
+QPushButton:pressed{
+background: rgb(0,0,139);
+border: 2px solid rgb(0,0,139);
+}
 QPushButton {
 	color: white;
 	background: rgb(100,149,237);
@@ -635,6 +639,7 @@ QListView::item:selected {
 	background: rgb(255, 255, 255);
 	font: 25 14pt &quot;黑体&quot;;
 	border: 2px solid rgb(30,144,255); 
+	padding: 10px;
 	border-radius: 10px;
 }</string>
    </property>
@@ -717,6 +722,10 @@ QListView::item:selected {
     <string notr="true">QPushButton:hover{
 background: rgb(65,105,225);
 border: 2px solid rgb(65,105,225);
+}
+QPushButton:pressed{
+background: rgb(0,0,139);
+border: 2px solid rgb(0,0,139);
 }
 QPushButton {
 	color: white;

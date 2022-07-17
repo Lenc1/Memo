@@ -6,7 +6,6 @@
 namespace Ui {
 class Check1;
 }
-
 class Check1 : public QWidget
 {
     Q_OBJECT
@@ -33,6 +32,7 @@ private slots:
     void LoadList();
 
     QStringList findFiles(const QString &startDir, QStringList filters);
+
 
 private:
     Ui::Check1 *ui;

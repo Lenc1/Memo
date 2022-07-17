@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include <QPlainTextEdit>
 #include <QInputDialog>
+#include <QGraphicsDropShadowEffect>
 char cot1[12],det1[20];
 FILE *fp3;
 void nread3() //读取当前备忘文件数
@@ -37,6 +38,16 @@ Check1::Check1(QWidget *parent) :
     setFixedSize(800,600);
     this->setWindowTitle("查看Memo");
     this->setWindowIcon(QIcon("Memo.ico"));
+    QGraphicsDropShadowEffect *s1 = new QGraphicsDropShadowEffect;
+    QGraphicsDropShadowEffect *s2 = new QGraphicsDropShadowEffect;
+    s1->setColor(QColor(200,200,200));
+    s1->setBlurRadius(8);//阴影模糊半径
+    s1->setOffset(3);    //阴影偏移
+    s2->setColor(QColor(200,200,200));
+    s2->setBlurRadius(8);//阴影模糊半径
+    s2->setOffset(3);    //阴影偏移
+    ui->pushButton->setGraphicsEffect(s1);
+    ui->pushButton_2->setGraphicsEffect(s2);
     LoadList();
 }
 Check1::~Check1()
@@ -104,7 +115,7 @@ void Check1::on_menu_click1(bool)
     {
         myDir.append("./").append(dfname);
         QFile fileTemp(myDir);
-        fileTemp.remove();  //删除了，好简单哈哈哈
+        fileTemp.remove();  //删除
         dn++;
         num--;
         if(num==0)
@@ -121,7 +132,7 @@ void Check1::on_menu_click1(bool)
         }
         else
         {
-            for(i=0;dn>0;i++)  //重写删除数  这里就难一点了，屋屋
+            for(i=0;dn>0;i++)  //重写删除数
             {
                 det1[i]=dn%10+'0';
                 dn/=10;
@@ -211,3 +222,4 @@ void Check1::LoadList()  //加载列表
     ui->listWidget->addItems(filelist);
     myDir=dirpath;
 }
+

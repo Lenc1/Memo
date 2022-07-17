@@ -11,6 +11,7 @@
 #include <QResizeEvent>
 #include <QDebug>
 #include <QFile>
+#include <QGraphicsDropShadowEffect>
 using namespace std;
 using std::string;
 FILE *fp;
@@ -36,11 +37,31 @@ MainWindow::MainWindow(QWidget *parent) :  //主菜单
     dread();
     ui->setupUi(this);
     setFixedSize(420,600);
+    QGraphicsDropShadowEffect *s1 = new QGraphicsDropShadowEffect;
+    QGraphicsDropShadowEffect *s2 = new QGraphicsDropShadowEffect;
+    QGraphicsDropShadowEffect *s3 = new QGraphicsDropShadowEffect;
+    QGraphicsDropShadowEffect *s4 = new QGraphicsDropShadowEffect;
     this->setWindowTitle("Memo ");//设置主窗口标题
     this->setWindowIcon(QIcon("Memo.ico"));//设置图标
     ui->label1->setText("[当前有      条Memo]");
     str=co1; //用string型字符串输出,因为setText不支持字符数组
     ui->label->setText(str);
+    s1->setColor(QColor(200,200,200));
+    s1->setBlurRadius(8);
+    s1->setOffset(3);
+    s2->setColor(QColor(200,200,200));
+    s2->setBlurRadius(8);
+    s2->setOffset(3);
+    s3->setColor(QColor(200,200,200));
+    s3->setBlurRadius(8);
+    s3->setOffset(3);
+    s4->setColor(QColor(200,200,200));
+    s4->setBlurRadius(8);
+    s4->setOffset(3);
+    ui->newmemo->setGraphicsEffect(s1);
+    ui->viewmemo->setGraphicsEffect(s2);
+    ui->backpackbt->setGraphicsEffect(s3);
+    ui->browse->setGraphicsEffect(s4);
 }
 MainWindow::~MainWindow()
 {
@@ -72,4 +93,9 @@ void MainWindow::on_viewmemo_clicked()
     Check1* w =new Check1;
     w->setWindowModality(Qt::ApplicationModal);
     w->show();
+}
+
+void MainWindow::on_backpackbt_clicked()
+{
+    QMessageBox::Button btn=QMessageBox::information(this,"备份","不好意思这部分还没做");
 }

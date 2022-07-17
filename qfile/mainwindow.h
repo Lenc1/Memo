@@ -23,6 +23,8 @@ private slots:
 
         void on_viewmemo_clicked();
 
+        void on_backpackbt_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
