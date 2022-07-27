@@ -62,6 +62,7 @@ MainWindow::MainWindow(QWidget *parent) :  //主菜单
     ui->viewmemo->setGraphicsEffect(s2);
     ui->backpackbt->setGraphicsEffect(s3);
     ui->browse->setGraphicsEffect(s4);
+    ui->image->setPixmap(QPixmap("./bg.png"));
 }
 MainWindow::~MainWindow()
 {

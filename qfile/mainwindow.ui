@@ -338,6 +338,20 @@ QPushButton {
      <string>...</string>
     </property>
    </widget>
+   <widget class="QLabel" name="image">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>431</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>image</zorder>
    <zorder>browse</zorder>
    <zorder>backpackbt</zorder>
    <zorder>newmemo</zorder>
