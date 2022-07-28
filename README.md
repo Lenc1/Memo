@@ -1,4 +1,4 @@
-# Memo
+# ![Memo](./image/icon.png)Memo
 是刚入门的编程小白写的第一个练手项目
 
 直接使用可以只下载release 里面有可执行文件
