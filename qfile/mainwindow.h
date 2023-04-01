@@ -18,12 +18,15 @@ public slots:
     void showChildDialog();
 protected:
         void closeEvent(QCloseEvent* ev);
+
 private slots:
         void on_newmemo_clicked();
 
         void on_viewmemo_clicked();
 
         void on_backpackbt_clicked();
+
+        void on_browse_clicked();
 
 private:
     Ui::MainWindow *ui;

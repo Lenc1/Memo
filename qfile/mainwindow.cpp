@@ -11,6 +11,7 @@
 #include <QResizeEvent>
 #include <QDebug>
 #include <QFile>
+#include <QCoreApplication>
 #include <QGraphicsDropShadowEffect>
 using namespace std;
 using std::string;
@@ -99,4 +100,9 @@ void MainWindow::on_viewmemo_clicked()
 void MainWindow::on_backpackbt_clicked()
 {
     QMessageBox::Button btn=QMessageBox::information(this,"备份","不好意思这部分还没做");
+}
+
+void MainWindow::on_browse_clicked()
+{
+    system("explorer .\\message");
 }
