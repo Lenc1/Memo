@@ -5,6 +5,7 @@
 #include "kid.h"
 #include "check1.h"
 #include "iostream"
+#include "setting.h"
 #include <fstream>
 #include <QCloseEvent>
 #include <QMessageBox>
@@ -105,4 +106,11 @@ void MainWindow::on_backpackbt_clicked()
 void MainWindow::on_browse_clicked()
 {
     system("explorer .\\message");
+}
+
+void MainWindow::on_setting_clicked()
+{
+    setting* w =new setting;
+    w->setWindowModality(Qt::ApplicationModal);
+    w->show();
 }

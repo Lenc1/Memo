@@ -28,6 +28,8 @@ private slots:
 
         void on_browse_clicked();
 
+        void on_setting_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

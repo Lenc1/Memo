@@ -27,15 +27,21 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     kid.cpp \
-    check1.cpp
+    check1.cpp \
+    setting.cpp
 
 HEADERS += \
         mainwindow.h \
     kid.h \
-    check1.h
+    check1.h \
+    setting.h
 
 FORMS += \
         mainwindow.ui \
     kid.ui \
-    check1.ui
+    check1.ui \
+    setting.ui
 RC_ICONS=Memo.ico
+
+RESOURCES += \
+    qrf.qrc

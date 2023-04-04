@@ -351,6 +351,48 @@ QPushButton {
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="setting">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>550</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+      <weight>2</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton:hover{
+background: rgb(128,128,128);
+border: 2px solid rgb(128,128,128);
+}
+QPushButton:pressed{
+background: rgb(105,105,105);
+border: 2px solid rgb(105,105,135);
+}
+QPushButton {
+	color: white;
+	background: rgb(211,211,211);
+	font: 22 12pt &quot;黑体&quot;;
+	border: 2px solid 	rgb(211,211,211);
+	border-radius: 5px;
+}</string>
+    </property>
+    <property name="text">
+     <string>设置</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>image</zorder>
    <zorder>browse</zorder>
    <zorder>backpackbt</zorder>
@@ -358,6 +400,7 @@ QPushButton {
    <zorder>viewmemo</zorder>
    <zorder>label1</zorder>
    <zorder>label</zorder>
+   <zorder>setting</zorder>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
